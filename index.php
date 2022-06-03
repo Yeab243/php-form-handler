@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js%22%3E</script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   <style>
   .fakeimg {
     height: 200px;
@@ -53,7 +53,7 @@
           <a class="nav-link active" href="#">Active</a>
         </li>
         <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
+          <a class="nav-link" href="#">Link</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Link</a>
@@ -65,29 +65,26 @@
       <hr class="d-sm-none">
     </div>
     <div class="col-sm-8">
+      <h2>PHP Form Handler</h2>
 
-    <?php
-        if (isset($_POST["FirstName"])){//show data
 
-            echo $_POST["FirstName"];
 
+      <?php
+        if(isset($_POST["FirstName"])){//show data
+          echo $_POST["FirstName"];
         }else{//show form
-
-            echo '
-                    <form method="post" action="">
-                        <div class="mb-3 mt-3">
-                            <label for="FirstName">First Name:</label>
-                            <input type="text" class="form-control" id="FirstName" placeholder="Enter first name" name="FirstName">
-                        </div>
-
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                    </form>
-                  ';
+          echo '
+              <form action="post" action="">
+              <div class="mb-3 mt-3">
+                <label for="FirstName">First Name:</label>
+                <input type="text" class="form-control" id="FirstName" placeholder="Enter First Name" name="FirstName">
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+              ';
         }
-    ?>
-
-  </div>
-</div>
+      ?>
+    </div>
 
 <div class="mt-5 p-4 bg-dark text-white text-center">
   <p>Footer</p>
