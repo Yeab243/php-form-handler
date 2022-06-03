@@ -74,7 +74,7 @@
           echo $_POST["FirstName"];
         }else{//show form
           echo '
-              <form action="post" action="">
+              <form method = "post" action="">
               <div class="mb-3 mt-3">
                 <label for="FirstName">First Name:</label>
                 <input type="text" class="form-control" id="FirstName" placeholder="Enter First Name" name="FirstName">
